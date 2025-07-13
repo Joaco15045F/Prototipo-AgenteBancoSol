@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
 export default function VoiceInput({ onTranscript, onStart, onStop }) {
-  const { transcript, resetTranscript, listening } = useSpeechRecognition({
+  const { transcript, resetTranscript } = useSpeechRecognition({
     commands: [],
     continuous: false,
     language: 'es-ES'

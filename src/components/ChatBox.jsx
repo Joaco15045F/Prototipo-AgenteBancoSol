@@ -26,7 +26,6 @@ export default function ChatBox({
   const [showScrollButton, setShowScrollButton] = useState(false);
   const [isAtBottom, setIsAtBottom] = useState(true);
   const [hasNewMessages, setHasNewMessages] = useState(false);
-  const [audioBlocked, setAudioBlocked] = useState(false);
   const [lastBotMessage, setLastBotMessage] = useState('');
   const [audioMapping, setAudioMapping] = useState(null);
   const [currentAudio, setCurrentAudio] = useState(null);
@@ -280,7 +279,6 @@ export default function ChatBox({
       audio.onended = () => {
         console.log('✅ Audio completado exitosamente');
         setCurrentAudio(null);
-        setAudioBlocked(false);
         if (onEnd) onEnd();
       };
 
@@ -291,7 +289,6 @@ export default function ChatBox({
           filename: filename,
           audioUrl: audioUrl
         });
-        setAudioBlocked(true);
         setCurrentAudio(null);
         // Fallback a beep si el audio falla
         console.log('🔄 Usando beep como fallback');
@@ -310,18 +307,16 @@ export default function ChatBox({
             name: error.name,
             filename: filename
           });
-          setAudioBlocked(true);
           setCurrentAudio(null);
           console.log('🔄 Usando beep como fallback por error de reproducción');
           fallbackBeep(onEnd);
         });
       }
 
-    } catch (error) {
-      console.error('Error configurando audio:', error);
-      setAudioBlocked(true);
-      fallbackBeep(onEnd);
-    }
+          } catch (error) {
+        console.error('Error configurando audio:', error);
+        fallbackBeep(onEnd);
+      }
   };
 
   // Función para encontrar el archivo de audio correspondiente
@@ -411,27 +406,23 @@ export default function ChatBox({
       utterance.lang = 'es-ES';
       utterance.rate = 0.9;
       utterance.pitch = 1.0;
-      utterance.volume = 1.0;
-              utterance.onend = () => {
-          setAudioBlocked(false);
+              utterance.volume = 1.0;
+        utterance.onend = () => {
           if (onEnd) onEnd();
         };
         utterance.onerror = () => {
-          setAudioBlocked(true);
           if (options.allowBeep !== false) fallbackBeep(onEnd);
         };
       window.speechSynthesis.speak(utterance);
 
-      setTimeout(() => {
-        if (!window.speechSynthesis.speaking) {
-          setAudioBlocked(true);
-          if (options.allowBeep !== false) fallbackBeep(onEnd);
-        }
-      }, 1000);
-    } catch (e) {
-      setAudioBlocked(true);
-      if (options.allowBeep !== false) fallbackBeep(onEnd);
-    }
+              setTimeout(() => {
+          if (!window.speechSynthesis.speaking) {
+            if (options.allowBeep !== false) fallbackBeep(onEnd);
+          }
+        }, 1000);
+      } catch (e) {
+        if (options.allowBeep !== false) fallbackBeep(onEnd);
+      }
   };
   
   
@@ -568,7 +559,7 @@ export default function ChatBox({
         messagesContainer.removeEventListener('scroll', handleScroll);
       };
     }
-  }, [messages, isAtBottom]);
+  }, [messages, isAtBottom, hasNewMessages]);
 
   // Si recibimos una pregunta FAQ desde App, la procesamos
   React.useEffect(() => {

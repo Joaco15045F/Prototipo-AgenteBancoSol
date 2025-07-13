@@ -1,95 +1,69 @@
-# 🏦 Agente Bancario IA - Prototipo
+# Agente Bancario IA - Banco Sol
 
-Un asistente virtual inteligente para servicios bancarios desarrollado en React con reconocimiento de voz y respuestas contextuales.
+Un asistente virtual inteligente para atención al cliente bancario, desarrollado con React y tecnologías modernas.
 
-## ✨ Características
+## 🚀 Características
 
-### 🤖 **Avatar Animado**
-- Cara animada con ojos que parpadean
-- Boca que se mueve al hablar
-- Animaciones cuando responde
-- Diseño moderno y profesional
+- **Chat interactivo** con respuestas inteligentes
+- **Síntesis de voz** en español
+- **Reconocimiento de voz** para entrada de comandos
+- **Preguntas frecuentes** con respuestas automáticas
+- **Avatar animado** con expresiones faciales
+- **Interfaz responsiva** para diferentes dispositivos
+- **Soporte para tótems** y pantallas grandes
 
-### 💬 **Chat Inteligente**
-- Sistema de respuestas contextuales
-- Base de datos local de FAQs bancarios
-- Respuestas automáticas en español
-- Indicador de "escribiendo" durante la carga
+## 🛠️ Tecnologías
 
-### 🎤 **Reconocimiento de Voz**
-- Configurado para español (es-ES)
-- Transcripción en tiempo real
-- Integración completa con el chat
-- Botones para iniciar/parar grabación
+- React 19
+- Speech Recognition API
+- Speech Synthesis API
+- CSS3 con animaciones
+- Responsive Design
 
-### 🔊 **Síntesis de Voz**
-- El asistente habla las respuestas
-- Configurado en español
-- Velocidad optimizada para mejor comprensión
+## 📦 Instalación
 
-### 📱 **Diseño Responsivo**
-- Interfaz moderna con gradientes
-- Efectos de cristal (glassmorphism)
-- Adaptable a móviles y tablets
-- Animaciones suaves y profesionales
+1. **Clona el repositorio:**
+   ```bash
+   git clone <tu-repositorio>
+   cd agente-banco
+   ```
 
-## 🚀 Instalación y Uso
+2. **Instala las dependencias:**
+   ```bash
+   npm install
+   ```
 
-### Requisitos Previos
-- Node.js (versión 14 o superior)
-- npm o yarn
+3. **Ejecuta en desarrollo:**
+   ```bash
+   npm start
+   ```
 
-### Instalación
-```bash
-# Clonar el repositorio
-git clone [url-del-repositorio]
-cd agente-banco
+4. **Construye para producción:**
+   ```bash
+   npm run build
+   ```
 
-# Instalar dependencias
-npm install
+## 🌐 Despliegue
 
-# Iniciar el servidor de desarrollo
-npm start
-```
+### Opción 1: Netlify (Recomendado)
 
-La aplicación se abrirá automáticamente en `http://localhost:3000`
+1. **Sube tu código a GitHub**
+2. **Ve a [Netlify](https://netlify.com)**
+3. **Haz clic en "Add new site" > "Import an existing project"**
+4. **Conecta tu repositorio de GitHub**
+5. **Configuración automática:**
+   - Build command: `npm run build`
+   - Publish directory: `build`
+6. **¡Listo! Tu sitio estará disponible en una URL como: `https://tu-proyecto.netlify.app`**
 
-## 🧪 Guía de Pruebas
+### Opción 2: Vercel
 
-### **Pruebas del Chat**
-
-**Preguntas Básicas (FAQs):**
-- "¿Cómo puedo abrir una cuenta?"
-- "¿Cuál es la tasa de interés para créditos?"
-- "¿Cuál es el horario de atención?"
-- "¿Dónde están las agencias?"
-- "¿Cuál es el límite de transferencia diario?"
-
-**Preguntas Inteligentes (Keywords):**
-- "Necesito un préstamo"
-- "Quiero abrir una cuenta de ahorro"
-- "¿Cómo hago transferencias?"
-- "¿Cuándo están abiertos?"
-- "¿Dónde hay una sucursal cerca?"
-- "¿Tienen tarjetas de crédito?"
-- "¿Cómo funciona la app móvil?"
-- "¿Es seguro el banco?"
-
-### **Pruebas de Voz**
-
-1. **Haz clic en "🎙️ Hablar"**
-2. **Habla claramente** una pregunta
-3. **Haz clic en "⏹️ Parar"** cuando termines
-4. **Observa** la transcripción y respuesta automática
-
-### **Pruebas de Funcionalidad**
-
-- ✅ **Enter** para enviar mensajes
-- ✅ **Botón de envío** se deshabilita durante carga
-- ✅ **Indicador "Escribiendo..."** aparece
-- ✅ **Respuestas por voz** automáticas
-- ✅ **Avatar animado** cuando responde
-- ✅ **Diseño responsivo** en diferentes tamaños
+1. **Sube tu código a GitHub**
+2. **Ve a [Vercel](https://vercel.com)**
+3. **Haz clic en "Add New Project"**
+4. **Importa tu repositorio**
+5. **Vercel detectará automáticamente que es un proyecto React**
+6. **¡Listo! Tu sitio estará disponible en una URL como: `https://tu-proyecto.vercel.app`**
 
 ## 📁 Estructura del Proyecto
 
@@ -97,81 +71,78 @@ La aplicación se abrirá automáticamente en `http://localhost:3000`
 agente-banco/
 ├── public/
 │   ├── data/
-│   │   ├── faqs.json          # FAQs básicos
-│   │   └── responses.json     # Respuestas inteligentes
+│   │   ├── responses.json      # Respuestas del bot
+│   │   └── audio-mapping.json  # Mapeo de archivos de audio
+│   ├── audio/                  # Archivos de audio MP3
 │   └── index.html
 ├── src/
 │   ├── components/
-│   │   ├── Avatar.jsx         # Avatar animado
-│   │   ├── ChatBox.jsx        # Chat principal
-│   │   └── VoiceInput.jsx     # Entrada de voz
-│   ├── App.jsx               # Componente principal
-│   ├── App.css               # Estilos principales
-│   └── index.js              # Punto de entrada
+│   │   ├── ChatBox.jsx         # Componente principal del chat
+│   │   ├── LogoAvatar.jsx      # Avatar animado
+│   │   ├── VoiceInput.jsx      # Entrada de voz
+│   │   └── MessageBubble.jsx   # Burbujas de mensaje
+│   ├── App.jsx                 # Componente principal
+│   └── App.css                 # Estilos principales
 └── package.json
 ```
 
-## 🧠 Sistema de Respuestas
+## 🎯 Funcionalidades
 
-### **Niveles de Inteligencia:**
+### Chat Inteligente
+- Respuestas automáticas basadas en palabras clave
+- Sistema de preguntas frecuentes
+- Respuestas contextuales
 
-1. **FAQs Exactos**: Respuestas directas a preguntas específicas
-2. **Keywords**: Respuestas basadas en palabras clave
-3. **Fallback**: Respuestas por defecto para consultas no reconocidas
+### Voz
+- Síntesis de voz en español
+- Reconocimiento de voz para comandos
+- Archivos de audio predefinidos
 
-### **Categorías de Respuestas:**
-- Cuentas bancarias
-- Créditos y préstamos
-- Transferencias
-- Horarios y ubicaciones
-- Tarjetas
-- Aplicación móvil
-- Seguridad
+### Interfaz
+- Diseño responsivo
+- Animaciones suaves
+- Soporte para pantallas táctiles
 
-## 🎨 Personalización
+## 🔧 Configuración
 
-### **Modificar Respuestas:**
-Edita `public/data/responses.json` para:
-- Agregar nuevas FAQs
-- Modificar respuestas existentes
-- Agregar nuevas keywords
-- Personalizar saludos y respuestas por defecto
+### Personalizar Respuestas
+Edita `public/data/responses.json` para modificar:
+- Preguntas frecuentes
+- Respuestas inteligentes
+- Mensajes de bienvenida
 
-### **Cambiar Estilos:**
-Modifica `src/App.css` para:
-- Cambiar colores y gradientes
-- Ajustar animaciones
-- Modificar el diseño del avatar
-- Personalizar la interfaz
+### Personalizar Audio
+Edita `public/data/audio-mapping.json` para:
+- Mapear preguntas a archivos de audio
+- Configurar audio de bienvenida y fallback
 
-## 🔧 Tecnologías Utilizadas
+## 📱 Compatibilidad
 
-- **React 19.1.0** - Framework principal
-- **react-speech-recognition** - Reconocimiento de voz
-- **Web Speech API** - Síntesis de voz
-- **CSS3** - Estilos y animaciones
-- **JSON** - Base de datos local
+- ✅ Chrome/Edge (recomendado)
+- ✅ Firefox
+- ✅ Safari
+- ✅ Dispositivos móviles
+- ✅ Pantallas táctiles
+- ✅ Tótems y kioscos
 
-## 📝 Notas Técnicas
+## 🚨 Notas Importantes
 
-- **Sin dependencias externas**: No requiere APIs de terceros
-- **Funciona offline**: Todas las respuestas son locales
-- **Configuración de voz**: Optimizada para español
-- **Responsive**: Adaptable a todos los dispositivos
-
-## 🤝 Contribución
-
-Para contribuir al proyecto:
-1. Fork el repositorio
-2. Crea una rama para tu feature
-3. Haz commit de tus cambios
-4. Push a la rama
-5. Abre un Pull Request
+- **HTTPS requerido** para funcionalidades de voz
+- **Permisos de micrófono** necesarios para reconocimiento de voz
+- **Navegadores modernos** recomendados para mejor experiencia
 
 ## 📄 Licencia
 
 Este proyecto está bajo la Licencia MIT.
 
+## 🤝 Contribuir
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
 ---
 
-**Desarrollado para demostración de capacidades de IA en servicios bancarios** 🏦✨
+**Desarrollado para Banco Sol** 🏦
