@@ -122,7 +122,7 @@ export default function ChatBox({
 
   useEffect(() => {
     // Cargar respuestas inteligentes
-    fetch('/data/responses.json')
+    fetch('data/responses.json')
       .then(response => response.json())
       .then(data => {
         setResponsesData(data);
@@ -138,7 +138,7 @@ export default function ChatBox({
       });
 
     // Cargar mapeo de audio
-    fetch('/data/audio-mapping.json')
+    fetch('data/audio-mapping.json')
       .then(response => response.json())
       .then(data => {
         setAudioMapping(data);

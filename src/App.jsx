@@ -73,7 +73,7 @@ function App() {
       {/* HEADER - TÍTULO */}
       <header className="App-header">
         <span className="header-title">Atención al cliente "Banco Sol"</span> 
-        <img src="/logo192.png" alt="Banco Sol Logo" className="header-logo" />
+        <img src="logo192.png" alt="Banco Sol Logo" className="header-logo" />
       </header>
 
       {/* CONTENIDO PRINCIPAL */}
