@@ -1,0 +1,14 @@
+{
+  "faq_audio_mapping": {
+    "¿Cómo puedo abrir una cuenta?": "faq-cuenta-abrir.mp3",
+    "Cómo puedo abrir una cuenta": "faq-cuenta-abrir.mp3",
+    "¿Qué tipos de cuenta ofrecen?": "faq-tipos-cuenta.mp3",
+    "Qué tipos de cuenta ofrecen": "faq-tipos-cuenta.mp3",
+    "¿Cuál es el horario de atención?": "faq-horario.mp3",
+    "Cuál es el horario de atención": "faq-horario.mp3",
+    "¿Cuáles son los límites de transferencias?": "faq-transferencia.mp3",
+    "Cuáles son los límites de transferencias": "faq-transferencia.mp3"
+  },
+  "greeting_audio": "greeting.mp3",
+  "fallback_audio": "fallback.mp3"
+} 

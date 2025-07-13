@@ -1,0 +1,454 @@
+/* HumanoidAvatar.css */
+.humanoid-avatar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.humanoid-avatar-frame {
+  width: 300px;
+  height: 450px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cabeza */
+.humanoid-head {
+  width: 120px;
+  height: 140px;
+  background: #f4d03f;
+  border-radius: 60px 60px 50px 50px;
+  position: relative;
+  z-index: 10;
+  box-shadow: 
+    inset 0 -10px 20px rgba(0, 0, 0, 0.2),
+    0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Cabello */
+.humanoid-hair {
+  width: 110px;
+  height: 35px;
+  background: linear-gradient(45deg, #2c3e50, #34495e);
+  border-radius: 55px 55px 0 0;
+  position: absolute;
+  top: -20px;
+  left: 5px;
+  box-shadow: 
+    inset 0 -5px 10px rgba(0, 0, 0, 0.4),
+    0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Cara */
+.humanoid-face {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+/* Ojos */
+.humanoid-eyes {
+  display: flex;
+  justify-content: space-between;
+  width: 70px;
+  margin: 10px 0;
+}
+
+.humanoid-eye {
+  width: 20px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.2),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease;
+}
+
+.humanoid-eye.blinking {
+  transform: scaleY(0.1);
+  transition: transform 0.1s ease;
+}
+
+.humanoid-pupil {
+  width: 10px;
+  height: 10px;
+  background: #2c3e50;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.5px;
+  left: 5px;
+  animation: look 8s infinite;
+}
+
+.humanoid-eyelash {
+  width: 100%;
+  height: 3px;
+  background: #2c3e50;
+  border-radius: 2px;
+  position: absolute;
+  top: -2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Nariz */
+.humanoid-nose {
+  width: 10px;
+  height: 18px;
+  background: linear-gradient(45deg, #e67e22, #d35400);
+  border-radius: 5px;
+  margin: 8px 0;
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.2),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Boca */
+.humanoid-mouth-container {
+  width: 45px;
+  height: 25px;
+  position: relative;
+  margin: 8px 0;
+}
+
+.humanoid-mouth {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.humanoid-lips {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+  border-radius: 0 0 22px 22px;
+  position: relative;
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.3),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.humanoid-tongue {
+  width: 70%;
+  height: 70%;
+  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+  border-radius: 0 0 15px 15px;
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.humanoid-teeth {
+  width: 80%;
+  height: 40%;
+  background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.humanoid-mouth.open .humanoid-lips {
+  border-radius: 0 0 10px 10px;
+  transform: scaleY(0.3);
+}
+
+.humanoid-mouth.open .humanoid-tongue {
+  opacity: 1;
+}
+
+.humanoid-mouth.open .humanoid-teeth {
+  opacity: 1;
+}
+
+/* Mejillas */
+.humanoid-cheeks {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.humanoid-cheek {
+  width: 15px;
+  height: 8px;
+  background: rgba(231, 76, 60, 0.3);
+  border-radius: 50%;
+  position: absolute;
+  top: 60px;
+}
+
+.humanoid-cheek.left {
+  left: 15px;
+}
+
+.humanoid-cheek.right {
+  right: 15px;
+}
+
+/* Cuello */
+.humanoid-neck {
+  width: 40px;
+  height: 25px;
+  background: #f4d03f;
+  border-radius: 20px;
+  margin-top: -5px;
+  z-index: 9;
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Torso */
+.humanoid-torso {
+  width: 200px;
+  height: 250px;
+  position: relative;
+  margin-top: -5px;
+  z-index: 8;
+}
+
+/* Camisa */
+.humanoid-shirt {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border-radius: 100px 100px 50px 50px;
+  position: relative;
+  box-shadow: 
+    inset 0 5px 15px rgba(0, 0, 0, 0.1),
+    0 10px 25px rgba(0, 0, 0, 0.2);
+  border: 2px solid #e9ecef;
+}
+
+/* Logo del banco */
+.humanoid-logo {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo-circle {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 3px 8px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  border: 2px solid #ffffff;
+}
+
+.logo-text {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.logo-text-full {
+  color: #2c3e50;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* Botones de la camisa */
+.humanoid-buttons {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.humanoid-button {
+  width: 8px;
+  height: 8px;
+  background: #6c757d;
+  border-radius: 50%;
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Bolsillo */
+.humanoid-pocket {
+  width: 30px;
+  height: 25px;
+  border: 2px solid #dee2e6;
+  border-radius: 0 0 15px 15px;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Corbata */
+.humanoid-tie {
+  width: 20px;
+  height: 80px;
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.humanoid-tie::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -5px;
+  width: 30px;
+  height: 20px;
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+  border-radius: 0 0 15px 15px;
+  transform: rotate(45deg);
+}
+
+/* Hombros */
+.humanoid-shoulders {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.humanoid-shoulder {
+  width: 60px;
+  height: 25px;
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border-radius: 30px;
+  position: absolute;
+  top: 10px;
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.humanoid-shoulder.left {
+  left: -20px;
+  transform: rotate(-15deg);
+}
+
+.humanoid-shoulder.right {
+  right: -20px;
+  transform: rotate(15deg);
+}
+
+/* Estado */
+.humanoid-status {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6c757d;
+  box-shadow: 
+    0 5px 15px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.humanoid-status.active {
+  background: rgba(76, 175, 80, 0.1);
+  color: #4CAF50;
+  border-color: #4CAF50;
+  animation: pulse 1s infinite;
+  box-shadow: 
+    0 5px 15px rgba(76, 175, 80, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Nombre */
+.humanoid-name {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px 25px;
+  border-radius: 15px;
+  box-shadow: 
+    0 5px 15px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 2px solid #e9ecef;
+}
+
+.name-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.name-subtitle {
+  font-size: 12px;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+/* Animaciones */
+@keyframes look {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .humanoid-avatar-frame {
+    width: 250px;
+    height: 380px;
+  }
+  
+  .humanoid-head {
+    width: 100px;
+    height: 120px;
+  }
+  
+  .humanoid-torso {
+    width: 160px;
+    height: 200px;
+  }
+} 

@@ -1,0 +1,70 @@
+{
+  "faqs": [
+    {
+      "categoria": "Cuentas",
+      "pregunta": "¿Cómo puedo abrir una cuenta?",
+      "respuesta": "Para abrir una cuenta, necesitas presentar tu cédula de identidad, un comprobante de domicilio y un comprobante de ingresos. Puedes hacerlo en cualquiera de nuestras sucursales o iniciar el proceso en línea desde nuestra página web. El proceso toma aproximadamente 30 minutos."
+    },
+    {
+      "categoria": "Cuentas",
+      "pregunta": "¿Qué tipos de cuenta ofrecen?",
+      "respuesta": "Ofrecemos varios tipos de cuentas: Cuenta de Ahorro (sin comisiones mensuales), Cuenta Corriente (con chequera), Cuenta Joven (para menores de 25 años con beneficios especiales), y Cuenta Empresarial (para negocios). Cada una tiene diferentes beneficios y requisitos."
+    },
+    {
+      "categoria": "Horarios",
+      "pregunta": "¿Cuál es el horario de atención?",
+      "respuesta": "Nuestras sucursales atienden de lunes a viernes de 8:00 a 16:00 y los sábados de 8:00 a 12:00. El servicio de cajeros automáticos está disponible 24/7. Nuestro centro de atención telefónica funciona de lunes a domingo de 7:00 a 22:00."
+    },
+    {
+      "categoria": "Transferencias",
+      "pregunta": "¿Cuáles son los límites de transferencias?",
+      "respuesta": "El límite de transferencia diaria es de 20 mil bolivianos por cliente. Para montos mayores, necesitas autorización especial y puede tomar hasta 24 horas. Las transferencias entre cuentas del mismo banco son instantáneas, mientras que las interbancarias pueden tomar hasta 2 días hábiles."
+    }
+  ],
+  "intelligent_responses": [
+    {
+      "keywords": ["préstamo", "crédito", "dinero", "financiamiento"],
+      "response": "Te ayudo con información sobre créditos. Tenemos diferentes opciones: Crédito Personal (hasta Bs. 50.000), Crédito Hipotecario (hasta Bs. 500.000), Crédito Vehicular (hasta Bs. 200.000) y Microcrédito (hasta Bs. 10.000). ¿Qué tipo de crédito te interesa?"
+    },
+    {
+      "keywords": ["cuenta", "ahorro", "depósito", "guardar"],
+      "response": "Perfecto, te explico nuestras opciones de cuentas. La Cuenta de Ahorro es ideal para guardar dinero sin comisiones, la Cuenta Corriente te permite usar cheques, y la Cuenta Joven tiene beneficios especiales para menores de 25 años. ¿Cuál te parece más adecuada para ti?"
+    },
+    {
+      "keywords": ["transferir", "enviar", "pagar", "movimiento"],
+      "response": "Para hacer transferencias tienes varias opciones. La más rápida es nuestra app móvil, también puedes ir a cualquier sucursal o usar banca en línea. El límite diario es Bs. 20.000 y las transferencias entre cuentas del mismo banco son instantáneas. ¿Necesitas ayuda con algún paso específico?"
+    },
+    {
+      "keywords": ["horario", "horarios", "atención", "atender", "abierto", "abierta", "abiertos", "abiertas"],
+      "response": "Nuestras sucursales atienden de lunes a viernes de 8:00 a 16:00 y sábados de 8:00 a 12:00. Los cajeros automáticos están disponibles 24/7. También puedes usar nuestros servicios en línea en cualquier momento. ¿En qué horario te resulta más conveniente?"
+    },
+    {
+      "keywords": ["dónde", "ubicación", "sucursal", "agencia", "cerca"],
+      "response": "Tenemos más de 150 agencias en todo Bolivia. En La Paz tenemos 25 sucursales, en Santa Cruz 30, en Cochabamba 20, y el resto en otras ciudades. Puedo ayudarte a encontrar la más cercana a tu ubicación. ¿En qué ciudad estás?"
+    },
+    {
+      "keywords": ["tarjeta", "débito", "crédito", "plástico"],
+      "response": "Ofrecemos tarjetas de débito gratuitas con todas nuestras cuentas, y tarjetas de crédito con diferentes beneficios. La tarjeta de débito te permite retirar dinero y hacer compras, mientras que la de crédito te da hasta 45 días para pagar. ¿Te interesa alguna en particular?"
+    },
+    {
+      "keywords": ["app", "móvil", "celular", "aplicación"],
+      "response": "Nuestra app móvil te permite hacer transferencias, consultar saldos, pagar servicios, y mucho más desde tu celular. Es gratuita, segura y fácil de usar. Puedes descargarla desde Google Play o App Store. ¿Te gustaría que te explique cómo instalarla?"
+    },
+    {
+      "keywords": ["seguridad", "seguro", "protección", "fraude"],
+      "response": "Tu seguridad es nuestra prioridad. Usamos tecnología de encriptación avanzada, verificación en dos pasos, y monitoreo 24/7 para detectar actividades sospechosas. También te recomendamos nunca compartir tus contraseñas y revisar regularmente tus movimientos. ¿Tienes alguna preocupación específica sobre seguridad?"
+    }
+  ],
+  "greetings": [
+    "¡Hola! Soy tu asistente bancario virtual. ¿En qué puedo ayudarte hoy?",
+    "Bienvenido al banco. Soy tu asistente personal, ¿cómo puedo servirte?",
+    "¡Hola! Estoy aquí para ayudarte con todas tus consultas bancarias. ¿Qué necesitas saber?",
+    "Bienvenido. Soy tu asistente virtual del banco, listo para ayudarte con cualquier consulta."
+  ],
+  "fallback": [
+    "Entiendo tu consulta. Te recomiendo contactar directamente con uno de nuestros asesores en sucursal para obtener información más específica.",
+    "Para esa consulta específica, te sugiero visitar nuestra sucursal más cercana donde un asesor podrá ayudarte personalmente.",
+    "Esa es una consulta especializada. Nuestros asesores en sucursal tienen toda la información actualizada para ayudarte mejor.",
+    "Para obtener información más detallada sobre eso, te recomiendo contactar con nuestro servicio al cliente al 800-123-4567."
+  ]
+} 

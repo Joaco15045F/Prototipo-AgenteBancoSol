@@ -1,70 +1,177 @@
-# Getting Started with Create React App
+# 🏦 Agente Bancario IA - Prototipo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Un asistente virtual inteligente para servicios bancarios desarrollado en React con reconocimiento de voz y respuestas contextuales.
 
-## Available Scripts
+## ✨ Características
 
-In the project directory, you can run:
+### 🤖 **Avatar Animado**
+- Cara animada con ojos que parpadean
+- Boca que se mueve al hablar
+- Animaciones cuando responde
+- Diseño moderno y profesional
 
-### `npm start`
+### 💬 **Chat Inteligente**
+- Sistema de respuestas contextuales
+- Base de datos local de FAQs bancarios
+- Respuestas automáticas en español
+- Indicador de "escribiendo" durante la carga
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🎤 **Reconocimiento de Voz**
+- Configurado para español (es-ES)
+- Transcripción en tiempo real
+- Integración completa con el chat
+- Botones para iniciar/parar grabación
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🔊 **Síntesis de Voz**
+- El asistente habla las respuestas
+- Configurado en español
+- Velocidad optimizada para mejor comprensión
 
-### `npm test`
+### 📱 **Diseño Responsivo**
+- Interfaz moderna con gradientes
+- Efectos de cristal (glassmorphism)
+- Adaptable a móviles y tablets
+- Animaciones suaves y profesionales
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Instalación y Uso
 
-### `npm run build`
+### Requisitos Previos
+- Node.js (versión 14 o superior)
+- npm o yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Instalación
+```bash
+# Clonar el repositorio
+git clone [url-del-repositorio]
+cd agente-banco
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Instalar dependencias
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Iniciar el servidor de desarrollo
+npm start
+```
 
-### `npm run eject`
+La aplicación se abrirá automáticamente en `http://localhost:3000`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🧪 Guía de Pruebas
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### **Pruebas del Chat**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Preguntas Básicas (FAQs):**
+- "¿Cómo puedo abrir una cuenta?"
+- "¿Cuál es la tasa de interés para créditos?"
+- "¿Cuál es el horario de atención?"
+- "¿Dónde están las agencias?"
+- "¿Cuál es el límite de transferencia diario?"
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Preguntas Inteligentes (Keywords):**
+- "Necesito un préstamo"
+- "Quiero abrir una cuenta de ahorro"
+- "¿Cómo hago transferencias?"
+- "¿Cuándo están abiertos?"
+- "¿Dónde hay una sucursal cerca?"
+- "¿Tienen tarjetas de crédito?"
+- "¿Cómo funciona la app móvil?"
+- "¿Es seguro el banco?"
 
-## Learn More
+### **Pruebas de Voz**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Haz clic en "🎙️ Hablar"**
+2. **Habla claramente** una pregunta
+3. **Haz clic en "⏹️ Parar"** cuando termines
+4. **Observa** la transcripción y respuesta automática
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### **Pruebas de Funcionalidad**
 
-### Code Splitting
+- ✅ **Enter** para enviar mensajes
+- ✅ **Botón de envío** se deshabilita durante carga
+- ✅ **Indicador "Escribiendo..."** aparece
+- ✅ **Respuestas por voz** automáticas
+- ✅ **Avatar animado** cuando responde
+- ✅ **Diseño responsivo** en diferentes tamaños
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📁 Estructura del Proyecto
 
-### Analyzing the Bundle Size
+```
+agente-banco/
+├── public/
+│   ├── data/
+│   │   ├── faqs.json          # FAQs básicos
+│   │   └── responses.json     # Respuestas inteligentes
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── Avatar.jsx         # Avatar animado
+│   │   ├── ChatBox.jsx        # Chat principal
+│   │   └── VoiceInput.jsx     # Entrada de voz
+│   ├── App.jsx               # Componente principal
+│   ├── App.css               # Estilos principales
+│   └── index.js              # Punto de entrada
+└── package.json
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🧠 Sistema de Respuestas
 
-### Making a Progressive Web App
+### **Niveles de Inteligencia:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. **FAQs Exactos**: Respuestas directas a preguntas específicas
+2. **Keywords**: Respuestas basadas en palabras clave
+3. **Fallback**: Respuestas por defecto para consultas no reconocidas
 
-### Advanced Configuration
+### **Categorías de Respuestas:**
+- Cuentas bancarias
+- Créditos y préstamos
+- Transferencias
+- Horarios y ubicaciones
+- Tarjetas
+- Aplicación móvil
+- Seguridad
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🎨 Personalización
 
-### Deployment
+### **Modificar Respuestas:**
+Edita `public/data/responses.json` para:
+- Agregar nuevas FAQs
+- Modificar respuestas existentes
+- Agregar nuevas keywords
+- Personalizar saludos y respuestas por defecto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### **Cambiar Estilos:**
+Modifica `src/App.css` para:
+- Cambiar colores y gradientes
+- Ajustar animaciones
+- Modificar el diseño del avatar
+- Personalizar la interfaz
 
-### `npm run build` fails to minify
+## 🔧 Tecnologías Utilizadas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **React 19.1.0** - Framework principal
+- **react-speech-recognition** - Reconocimiento de voz
+- **Web Speech API** - Síntesis de voz
+- **CSS3** - Estilos y animaciones
+- **JSON** - Base de datos local
+
+## 📝 Notas Técnicas
+
+- **Sin dependencias externas**: No requiere APIs de terceros
+- **Funciona offline**: Todas las respuestas son locales
+- **Configuración de voz**: Optimizada para español
+- **Responsive**: Adaptable a todos los dispositivos
+
+## 🤝 Contribución
+
+Para contribuir al proyecto:
+1. Fork el repositorio
+2. Crea una rama para tu feature
+3. Haz commit de tus cambios
+4. Push a la rama
+5. Abre un Pull Request
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT.
+
+---
+
+**Desarrollado para demostración de capacidades de IA en servicios bancarios** 🏦✨
