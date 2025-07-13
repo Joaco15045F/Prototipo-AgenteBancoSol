@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Prototipo-AgenteBancoSol/static/css/main.c96a4137.css",
+    "main.js": "/Prototipo-AgenteBancoSol/static/js/main.f2b825aa.js",
+    "static/js/453.493b0067.chunk.js": "/Prototipo-AgenteBancoSol/static/js/453.493b0067.chunk.js",
+    "index.html": "/Prototipo-AgenteBancoSol/index.html",
+    "main.c96a4137.css.map": "/Prototipo-AgenteBancoSol/static/css/main.c96a4137.css.map",
+    "main.f2b825aa.js.map": "/Prototipo-AgenteBancoSol/static/js/main.f2b825aa.js.map",
+    "453.493b0067.chunk.js.map": "/Prototipo-AgenteBancoSol/static/js/453.493b0067.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c96a4137.css",
+    "static/js/main.f2b825aa.js"
+  ]
+}

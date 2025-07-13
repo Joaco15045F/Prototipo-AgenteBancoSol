@@ -1,0 +1,43 @@
+[
+    {
+      "categoria": "Cuentas",
+      "pregunta": "¿Cómo puedo abrir una cuenta?",
+      "respuesta": "Puede abrir una cuenta presentando su cédula de identidad en cualquiera de nuestras sucursales."
+    },
+    {
+      "categoria": "Cuentas",
+      "pregunta": "¿Qué tipos de cuenta ofrecen?",
+      "respuesta": "Ofrecemos cuentas de ahorro, cuentas corrientes y cuentas para jóvenes."
+    },
+    {
+      "categoria": "Créditos",
+      "pregunta": "¿Qué necesito para solicitar un crédito?",
+      "respuesta": "Debe presentar su cédula de identidad, un comprobante de ingresos y una factura de servicios."
+    },
+    {
+      "categoria": "Créditos",
+      "pregunta": "¿Cuál es la tasa de interés actual para créditos?",
+      "respuesta": "Actualmente, la tasa de interés para créditos personales es del 8.5% anual."
+    },
+    {
+      "categoria": "Transferencias",
+      "pregunta": "¿Cómo hago una transferencia bancaria?",
+      "respuesta": "Puede hacer una transferencia desde nuestra app móvil o en ventanilla en cualquier sucursal."
+    },
+    {
+      "categoria": "Transferencias",
+      "pregunta": "¿Cuál es el límite de transferencia diario?",
+      "respuesta": "El límite de transferencia diaria es de Bs. 20.000 por cliente."
+    },
+    {
+      "categoria": "Horarios",
+      "pregunta": "¿Cuál es el horario de atención?",
+      "respuesta": "Atendemos de lunes a viernes de 8:00 a 16:00 y sábados de 8:00 a 12:00."
+    },
+    {
+      "categoria": "Ubicación",
+      "pregunta": "¿Dónde están ubicadas las agencias?",
+      "respuesta": "Contamos con agencias en toda Bolivia. Puede ver el mapa completo en nuestra página web."
+    }
+  ]
+  
